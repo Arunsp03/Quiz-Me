@@ -5,7 +5,8 @@ import {useNavigate} from "react-router-dom"
 import "../ComponentStyles/Quiz.css";
 export default function Quiz() {
   const usenavigate=useNavigate();
-
+  const[userresponse,setuserresponse]=useState();
+  let userresp;
   function selected(e,value)
     {
         document.getElementById("option1").classList.remove("selected-option");
@@ -13,9 +14,9 @@ export default function Quiz() {
         document.getElementById("option3").classList.remove("selected-option");
         document.getElementById("option4").classList.remove("selected-option");
        e.target.classList.add("selected-option")
-       if(value===CurrentQuestion.correctanswer){
-        setFinalscore(finalscore+1);
-       }
+       setuserresponse(value)
+   
+   
     }
   const [CurrentQuestion, setCurrentQuestion] = useState({});
   
@@ -24,11 +25,12 @@ export default function Quiz() {
   useEffect(() => {
     socketconn.on("current-question", (data) => {
       setCurrentQuestion(data);
-      console.log("1st question");
+      // console.log("1st question");
     });
     socketconn.on("next-question", (data) => {
-      
-     
+      if(userresponse==CurrentQuestion.correctanswer){
+        setFinalscore(finalscore+1);
+       }
       document.getElementById("option1").classList.remove("selected-option");
       document.getElementById("option2").classList.remove("selected-option");
       document.getElementById("option3").classList.remove("selected-option");
@@ -37,6 +39,10 @@ export default function Quiz() {
     
     });
     socketconn.on("no-questions-left", (data) => {
+      if(userresponse==CurrentQuestion.correctanswer){
+        console.log("no qs left");
+        setFinalscore(finalscore+1);
+       }
       usenavigate("/gameover")
     });
   }, [socketconn]);
