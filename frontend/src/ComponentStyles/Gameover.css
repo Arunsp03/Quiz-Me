@@ -1,0 +1,14 @@
+.Game-over{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Game-over button{
+    background-color: black;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}

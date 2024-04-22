@@ -1,0 +1,19 @@
+.Landing-Home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.landing-btn{
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 3px;
+
+}

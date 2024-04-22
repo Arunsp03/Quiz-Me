@@ -1,0 +1,28 @@
+.adminform{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 1rem;
+    /* background-color: yellow; */
+}
+.adminform input{
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+.adminform button {
+    margin-top: 1rem;
+    width: 10vw;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.AdminForms-Header{
+    text-align: center;
+}
