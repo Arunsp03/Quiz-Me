@@ -38,12 +38,11 @@ export default function AdminControl() {
 
         
     </h3>
-    
-    <h4>Option 1 : {CurrentQuestion?.option1?CurrentQuestion.option1:"noting"}</h4>
-    <h4>Option 2 : {CurrentQuestion?.option2?CurrentQuestion.option2:"noting"}</h4>
-    <h4>Option 3 : {CurrentQuestion?.option3?CurrentQuestion.option3:"noting"}</h4>
-    <h4>Option 4 : {CurrentQuestion?.option4?CurrentQuestion.option4:"noting"}</h4>
-    <h4>Correct Answer: {CurrentQuestion?.correctanswer?CurrentQuestion.correctanswer:"noting"}</h4>
+    <h4 className="option">Option 1 : {CurrentQuestion?.option1?CurrentQuestion.option1:"noting"}</h4>
+    <h4 className="option">Option 2 : {CurrentQuestion?.option2?CurrentQuestion.option2:"noting"}</h4>
+    <h4 className="option">Option 3 : {CurrentQuestion?.option3?CurrentQuestion.option3:"noting"}</h4>
+    <h4 className="option">Option 4 : {CurrentQuestion?.option4?CurrentQuestion.option4:"noting"}</h4>
+    <h4 className="option">Correct Answer: {CurrentQuestion?.correctanswer?CurrentQuestion.correctanswer:"noting"}</h4>
     <button id='next-btn' className="next-btn" type='button' onClick={next}>Next</button>
     </div>
     </>

@@ -4,6 +4,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50% );
+    margin-top: 1rem;
     
 }
 .QuizManager-Header{
@@ -19,4 +20,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+}
+.option{
+    margin-top: 2rem;
 }

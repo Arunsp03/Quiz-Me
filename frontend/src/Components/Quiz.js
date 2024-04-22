@@ -45,32 +45,22 @@ export default function Quiz() {
      
       <div className="QuizManager">
         <h3>
-          Question:
-          {CurrentQuestion?.question ? CurrentQuestion.question : "nothing"}
+          Question : {CurrentQuestion?.question ? CurrentQuestion.question : "nothing"}
         </h3>
 
         <h4 className="options" id="option1" onClick={(e)=>{selected(e,CurrentQuestion.option1)}}>
-          Option 1 :
-          {CurrentQuestion?.option1 ? CurrentQuestion.option1 : "noting"}
+          Option 1 : {CurrentQuestion?.option1 ? CurrentQuestion.option1 : "noting"}
         </h4>
         <h4 className="options" id="option2" onClick={(e)=>{selected(e,CurrentQuestion.option2)}}>
-          Option 2 :
-          {CurrentQuestion?.option2 ? CurrentQuestion.option2 : "noting"}
+          Option 2 : {CurrentQuestion?.option2 ? CurrentQuestion.option2 : "noting"}
         </h4>
         <h4 className="options" id="option3" onClick={(e)=>{selected(e,CurrentQuestion.option3)}}>
-          Option 3 :
-          {CurrentQuestion?.option3 ? CurrentQuestion.option3 : "noting"}
+          Option 3 : {CurrentQuestion?.option3 ? CurrentQuestion.option3 : "noting"}
         </h4>
         <h4 className="options"  id="option4" onClick={(e)=>{selected(e,CurrentQuestion.option4)}}>
-          Option 4 :
-          {CurrentQuestion?.option4 ? CurrentQuestion.option4 : "noting"}
+          Option 4 : {CurrentQuestion?.option4 ? CurrentQuestion.option4 : "noting"}
         </h4>
-        {/* <h4 className="options">
-          Option 5 :
-          {CurrentQuestion?.correctanswer
-            ? CurrentQuestion.correctanswer
-            : "noting"}
-        </h4> */}
+        
       </div>
     </>
   );
