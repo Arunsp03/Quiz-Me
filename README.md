@@ -7,6 +7,9 @@
   <li>
     The admin controls the question which is being showed.
   </li>
+    <li>
+    P.S I didnt put much effort into the UI 
+  </li>
 </ul>
 
 
